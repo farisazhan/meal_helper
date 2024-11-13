@@ -1,0 +1,48 @@
+{% extends "base.html" %}
+
+{% block content %}
+<h2>{{ meal[1] }}</h2>
+<p><strong>Description:</strong> {{ meal[2] }}</p>
+<p><strong>Instructions:</strong> {{ meal[3] }}</p>
+
+<p>Set number of people:</p>
+<input type="number" id="numPeople" value="1" min="1" onchange="adjustIngredients()" />
+<button onclick="adjustIngredients()">Adjust Ingredients</button>
+<h3>Ingredients:</h3>
+
+<table border="1" id="ingredientsTable">
+    <thead>
+        <tr>
+            <th>Ingredient</th>
+            <th>Quantity</th>
+            <th>Unit</th>
+        </tr>
+    </thead>
+    <tbody>
+        {% for ingredient in ingredients %}
+        <tr>
+            <td>{{ ingredient['name'] }}</td>
+            <td class="quantity" data-original="{{ ingredient['quantity'] }}">{{ ingredient['quantity'] }}</td>
+            <td>{{ ingredient['unit'] }}</td>
+        </tr>
+        {% endfor %}
+    </tbody>
+</table>
+
+<a href="/">Back to Home</a>
+
+<script>
+// Adjust ingredient quantities based on the number of people
+function adjustIngredients() {
+    let numPeople = document.getElementById('numPeople').value;
+    let quantities = document.querySelectorAll('.quantity');
+
+    quantities.forEach(function(quantityCell) {
+        let originalQuantity = parseFloat(quantityCell.getAttribute('data-original'));
+        if (!isNaN(originalQuantity) && numPeople > 0) {
+            quantityCell.textContent = (originalQuantity * numPeople).toFixed(2);
+        }
+    });
+}
+</script>
+{% endblock %}
