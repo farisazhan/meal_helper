@@ -1,6 +1,7 @@
 {% extends "base.html" %}
 {% block content %}
-<h2>Hello {{ firstname }}!</h2>
+<h2 class="user">Hello {{ firstname }}!</h2>
+<h4>Choose your preferred meal.</h4>
 <ul>
     {% for meal in meals %}
         <li class="meal"><a href="{{ url_for('meal_details', meal_id=meal[0]) }}">{{ meal[1] }}</a></li>
