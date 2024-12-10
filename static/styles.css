@@ -30,6 +30,17 @@ header {
     text-align: center;
 }
 
+.login-register {
+    text-align: center;
+    margin: auto;
+    text-align: center;
+    color: black;
+    position: relative; /* Enable positioning for vertical centering */
+    top: 50%; /* Position the top edge at the vertical center */
+    left: 30%; /* Position the left edge at the horizontal center */
+    transform: translate(-75%, -10%); /* Offset by half the element's width and height */
+}
+
 .register {
     width: 50%; /* Adjust width as needed */
     margin: auto;
@@ -37,8 +48,74 @@ header {
     color: black;
     position: relative; /* Enable positioning for vertical centering */
     top: 50%; /* Position the top edge at the vertical center */
-    left: 40%; /* Position the left edge at the horizontal center */
-    transform: translate(-50%, -50%); /* Offset by half the element's width and height */
+    left: 20%; /* Position the left edge at the horizontal center */
+    transform: translate(-75%, -10%); /* Offset by half the element's width and height */
+}
+
+.overlay {
+    background: url('images/food-background.jpg');
+    background-size: cover;
+    padding: 20px;
+    border-radius: 10px;
+    max-width: 70%;
+    margin: auto;
+}
+
+.overlay-content {
+    background-color: rgba(255, 255, 255, 0.9); /* Semi-transparent white box */
+    padding: 20px;
+    border-radius: 10px;
+    max-width: 300px;
+}
+
+.meal-page {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    max-width: 100%; /* Ensures the container doesn't exceed its parent's width */
+    margin: 0 auto; /* Centers the container horizontally */
+    padding: 20px;
+}
+
+.meal-content {
+    flex: 1; /* Ensures the content takes up available space */
+    padding-right: 20px; /* Adds space between text and the image */
+}
+
+.meal-image-1 {
+    flex: 0 0 30%; /* Fixes the image container width to 30% */
+    max-width: 30%; /* Ensures the image doesn’t exceed 30% of the container */
+    background: url('images/spaghetti.jpg') no-repeat center center;
+    background-size: contain; /* Scales the image to fit within the container */
+    height: auto; /* Adjusts height based on the width */
+    aspect-ratio: 3 / 4; /* Maintains a consistent aspect ratio */
+}
+
+.meal-image-2 {
+    flex: 0 0 30%; /* Fixes the image container width to 30% */
+    max-width: 30%; /* Ensures the image doesn’t exceed 30% of the container */
+    background: url('images/curry.jpg') no-repeat center center;
+    background-size: contain; /* Scales the image to fit within the container */
+    height: auto; /* Adjusts height based on the width */
+    aspect-ratio: 3 / 4; /* Maintains a consistent aspect ratio */
+}
+
+.meal-image-3 {
+    flex: 0 0 30%; /* Fixes the image container width to 30% */
+    max-width: 30%; /* Ensures the image doesn’t exceed 30% of the container */
+    background: url('images/nasilemak.jpg') no-repeat center center;
+    background-size: contain; /* Scales the image to fit within the container */
+    height: auto; /* Adjusts height based on the width */
+    aspect-ratio: 3 / 4; /* Maintains a consistent aspect ratio */
+}
+
+.meal-image-4 {
+    flex: 0 0 30%; /* Fixes the image container width to 30% */
+    max-width: 30%; /* Ensures the image doesn’t exceed 30% of the container */
+    background: url('images/satay.jpg') no-repeat center center;
+    background-size: contain; /* Scales the image to fit within the container */
+    height: auto; /* Adjusts height based on the width */
+    aspect-ratio: 3 / 4; /* Maintains a consistent aspect ratio */
 }
 
 .meal {
@@ -127,8 +204,14 @@ label {
     margin: 10px 0 5px;
 }
 
-input {
+#numPeople {
     width: 5%;
+    padding: 8px;
+    margin-bottom: 10px;
+}
+
+input {
+    width: 100%;
     padding: 8px;
     margin-bottom: 10px;
 }

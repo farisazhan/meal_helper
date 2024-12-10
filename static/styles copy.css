@@ -1,0 +1,165 @@
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+}
+
+h2.login {
+    width: 50%; /* Adjust width as needed */
+    margin: auto;
+    text-align: center;
+    color: black;
+    position: relative; /* Enable positioning for vertical centering */
+    top: 50%; /* Position the top edge at the vertical center */
+    left: 20%; /* Position the left edge at the horizontal center */
+    transform: translate(-75%, -10%); /* Offset by half the element's width and height */
+}
+
+.container {
+    width: 80%;
+    margin: auto;
+    overflow: hidden;
+}
+
+header {
+    background: #333;
+    color: #fff;
+    padding: 10px 0;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.register {
+    width: 50%; /* Adjust width as needed */
+    margin: auto;
+    text-align: center;
+    color: black;
+    position: relative; /* Enable positioning for vertical centering */
+    top: 50%; /* Position the top edge at the vertical center */
+    left: 40%; /* Position the left edge at the horizontal center */
+    transform: translate(-50%, -50%); /* Offset by half the element's width and height */
+}
+
+.meal {
+    background-color: transparent;
+    color: black;
+}
+
+a.title:hover {
+    color: yellow;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+}
+
+ul li {
+    margin: 5px 0;
+}
+
+ul li a {
+    text-decoration: none;
+    color: black;
+    padding: 5px;
+    display: inline-block;
+    width: 200px;
+    border: 1px round #ddd;
+    border-radius: 5px;
+    background: lightgray;
+}
+
+ul li a:hover {
+    color: #020990f9;
+    background: #ddd;
+}
+
+.flash {
+    position: relative;
+    padding: 15px 50px;
+    margin: 10px 0;
+    border-radius: 5px;
+    text-align: center;
+    display: inline-block;
+}
+
+.flash .close-btn {
+    position: absolute;
+    top: 5px;
+    right: 10px;
+    cursor: pointer;
+    font-size: 20px;
+    color: #000;
+    opacity: 0.6;
+}
+
+.flash .close-btn:hover {
+    opacity: 1;
+}
+
+.flash.success {
+    background-color: #d4edda;
+    color: #155724;
+}
+
+.flash.info {
+    background-color: #cce5ff;
+    color: #004085;
+}
+
+.flash.danger {
+    background-color: #f8d7da;
+    color: #721c24;
+}
+
+form {
+    max-width: 400px;
+    margin: auto;
+    padding: 15px 50px 25px 35px;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    background-color: #f4f4f4;
+}
+
+label {
+    display: block;
+    margin: 10px 0 5px;
+}
+
+input {
+    width: 5%;
+    padding: 8px;
+    margin-bottom: 10px;
+}
+
+button {
+    background-color: #333;
+    color: white;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #555;
+}
+
+h1 a:link {
+    color: white;
+    background-color: transparent;
+    text-decoration: none;
+}
+
+h1 a:hover {
+    color: green;
+    background-color: transparent;
+    text-decoration: none;
+}
+
+h1 a:visited {
+    color: white;
+    background-color: transparent;
+    text-decoration: none;
+}
